@@ -4,6 +4,9 @@
     xmlns:ns="http://www.eventmanagement.com/event"
     elementFormDefault="qualified">
     
+    <xs:include schemaLocation="pessoa.xsd"/>
+    <xs:include schemaLocation="local.xsd"/>
+
     <xs:element name="event">
         <xs:complexType>
             <xs:sequence>
@@ -12,6 +15,9 @@
                 <xs:element name="precoBilhete" type="xs:decimal"/>
                 <xs:element name="dataInicio" type="xs:dateTime"/>
                 <xs:element name="dataFinal" type="xs:dateTime"/>
+                <xs:element name="organizador" type="ns:pessoa"/>
+                <xs:element name="local" type="ns:local"/>
+                <xs:element name="participante" type="ns:pessoa" minOccurs="3" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

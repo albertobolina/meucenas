@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.eventmanagement.com/event"
+    xmlns:ns="http://www.eventmanagement.com/event"
+    elementFormDefault="qualified">    
+    
+    <xs:complexType name="pessoa">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="telefone" type="xs:string"/>            
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

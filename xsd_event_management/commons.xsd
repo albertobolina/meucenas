@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.eventmanagement.com/common"
+    xmlns:ns="http://www.eventmanagement.com/common"
+    elementFormDefault="qualified">
+    
+    <!-- string com maximo de 25 chars-->
+    <xs:simpleType name="stringmax25">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="25"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- string com maximo de 200 chars -->
+    <xs:simpleType name="stringmax200">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

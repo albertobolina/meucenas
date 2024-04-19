@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.eventmanagement.com/event"
+    xmlns:ns="http://www.eventmanagement.com/event"
+    elementFormDefault="qualified">    
+    
+    <xs:complexType name="local">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="rua" type="xs:string"/>
+            <xs:element name="codPostal" type="xs:string"/>            
+            <xs:element name="localidade" type="xs:string"/>            
+            <xs:element name="concelho" type="xs:string"/>            
+            <xs:element name="distrito" type="xs:string"/>                        
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
