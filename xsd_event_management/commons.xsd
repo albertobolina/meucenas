@@ -18,4 +18,18 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <!-- email -->
+    <xs:simpleType name="email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- telefone -->
+    <xs:simpleType name="telefone">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>

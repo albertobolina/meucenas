@@ -2,13 +2,16 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     targetNamespace="http://www.eventmanagement.com/event"
     xmlns:ns="http://www.eventmanagement.com/event"
+    xmlns:co="http://www.eventmanagement.com/common"
     elementFormDefault="qualified">    
     
+    <xs:import schemaLocation="commons.xsd" namespace="http://www.eventmanagement.com/common"/>
+
     <xs:complexType name="pessoa">
         <xs:sequence>
-            <xs:element name="nome" type="xs:string"/>
-            <xs:element name="email" type="xs:string"/>
-            <xs:element name="telefone" type="xs:string"/>            
+            <xs:element name="nome" type="co:stringmax25"/>
+            <xs:element name="email" type="co:email"/>
+            <xs:element name="telefone" type="co:telefone"/>            
         </xs:sequence>
     </xs:complexType>
     

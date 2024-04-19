@@ -2,16 +2,18 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     targetNamespace="http://www.eventmanagement.com/event"
     xmlns:ns="http://www.eventmanagement.com/event"
+    xmlns:co="http://www.eventmanagement.com/common"
     elementFormDefault="qualified">
     
     <xs:include schemaLocation="pessoa.xsd"/>
     <xs:include schemaLocation="local.xsd"/>
+    <xs:import schemaLocation="commons.xsd" namespace="http://www.eventmanagement.com/common"/>
 
     <xs:element name="event">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="nome" type="xs:string"/>
-                <xs:element name="descricao" type="xs:string"/>
+                <xs:element name="nome" type="co:stringmax25"/>
+                <xs:element name="descricao" type="co:stringmax200"/>
                 <xs:element name="precoBilhete" type="xs:decimal"/>
                 <xs:element name="dataInicio" type="xs:dateTime"/>
                 <xs:element name="dataFinal" type="xs:dateTime"/>
