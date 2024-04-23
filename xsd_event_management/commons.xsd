@@ -32,4 +32,11 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <!-- ID -->
+    <xs:simpleType name="id">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{6}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>

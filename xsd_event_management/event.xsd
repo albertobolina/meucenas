@@ -21,6 +21,7 @@
                 <xs:element name="local" type="ns:local"/>
                 <xs:element name="participante" type="ns:pessoa" minOccurs="3" maxOccurs="unbounded"/>
             </xs:sequence>
+            <xs:attribute name="id" type="co:id" use="required"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

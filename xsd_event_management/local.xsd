@@ -2,8 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     targetNamespace="http://www.eventmanagement.com/event"
     xmlns:ns="http://www.eventmanagement.com/event"
+    xmlns:co="http://www.eventmanagement.com/common"
     elementFormDefault="qualified">    
     
+    <xs:import schemaLocation="commons.xsd" namespace="http://www.eventmanagement.com/common"/>
+
     <xs:complexType name="local">
         <xs:sequence>
             <xs:element name="nome" type="xs:string"/>
@@ -13,6 +16,7 @@
             <xs:element name="concelho" type="xs:string"/>            
             <xs:element name="distrito" type="xs:string"/>                        
         </xs:sequence>
+        <xs:attribute name="id" type="co:id" use="required"/>
     </xs:complexType>
     
 </xs:schema>

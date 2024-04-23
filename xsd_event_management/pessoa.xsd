@@ -13,6 +13,7 @@
             <xs:element name="email" type="co:email"/>
             <xs:element name="telefone" type="co:telefone"/>            
         </xs:sequence>
+        <xs:attribute name="id" type="co:id" use="required"/>
     </xs:complexType>
     
 </xs:schema>

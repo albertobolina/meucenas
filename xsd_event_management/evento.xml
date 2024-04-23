@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:event id="123456"
+    xmlns:tns="http://www.eventmanagement.com/event"
+    xmlns:tns2="http://www.eventmanagement.com/common"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.eventmanagement.com/event event.xsd">
+    
+    <tns:nome>MEO Sudoeste</tns:nome>
+    <tns:descricao>Festival de verão</tns:descricao>
+    <tns:precoBilhete>50.00</tns:precoBilhete>
+    <tns:dataInicio>2024-08-02T09:00:00</tns:dataInicio>
+    <tns:dataFinal>2024-08-09T09:00:00</tns:dataFinal>
+    <tns:organizador id="234567">
+        <tns:nome>Macaco do chinês</tns:nome>
+        <tns:email>macacodochines@gmail.com</tns:email>
+        <tns:telefone>9612345672</tns:telefone>
+    </tns:organizador>
+
+</tns:event>
