@@ -15,5 +15,32 @@
         <tns:email>macacodochines@gmail.com</tns:email>
         <tns:telefone>9612345672</tns:telefone>
     </tns:organizador>
-
+    <tns:local id="876543">
+        <tns:nome>Herdade das cenas</tns:nome>
+        <tns:rua>Rua das cenas</tns:rua>
+        <tns:codPostal>2050-275</tns:codPostal>
+        <tns:localidade>Zambujeira</tns:localidade>
+        <tns:concelho>Odemira</tns:concelho>
+        <tns:distrito>Beja</tns:distrito>
+    </tns:local>
+    <tns:participante id="000001">
+        <tns:nome>Manuel</tns:nome>
+        <tns:email>manuel@gmail.com</tns:email>
+        <tns:telefone>9398765431</tns:telefone>
+    </tns:participante>
+    <tns:participante id="000002">
+        <tns:nome>Manuela</tns:nome>
+        <tns:email>manuela@gmail.com</tns:email>
+        <tns:telefone>9392765431</tns:telefone>
+    </tns:participante>
+    <tns:participante id="000003">
+        <tns:nome>Joana</tns:nome>
+        <tns:email>joana@gmail.com</tns:email>
+        <tns:telefone>9292765431</tns:telefone>
+    </tns:participante>
+    <tns:participante id="000004">
+        <tns:nome>Pedro</tns:nome>
+        <tns:email>pedro@gmail.com</tns:email>
+        <tns:telefone>9192765431</tns:telefone>
+    </tns:participante>
 </tns:event>
