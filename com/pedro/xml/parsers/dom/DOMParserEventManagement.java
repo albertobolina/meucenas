@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
@@ -45,18 +46,33 @@ public class DOMParserEventManagement {
         // dados do organizador do evento
         NodeList organizerEventoList = documento.getElementsByTagName("tns:organizador");        
         Node organizerEvento = organizerEventoList.item(0);   
-        NodeList dadosOrganizer = organizerEvento.getChildNodes();
-        for (int i = 0; i < dadosOrganizer.getLength(); i++){
+        NodeList dadosOrganizer = organizerEvento.getChildNodes(); // o elemento organizador tem sub elementos, que são os seus dados
+        Pessoa organizador = new Pessoa();  // instancia que vai conter os dados do organizador
+
+        NamedNodeMap atribOrganizador =  organizerEvento.getAttributes(); // recolhe os atributos do organizador
+        organizador.setId(atribOrganizador.getNamedItem("id").getTextContent());
+
+        for (int i = 0; i < dadosOrganizer.getLength(); i++){ // recolhe os dados do organizador
             Node elementoDados = dadosOrganizer.item(i);
-            switch (elementoDados.getTextContent()) {
+            switch (elementoDados.getNodeName()) {
                 case "tns:nome":
-                    
+                    organizador.setNome(elementoDados.getTextContent());
                     break;
-            
+                
+                case "tns:email":
+                    organizador.setEmail(elementoDados.getTextContent());
+                    break;
+
+                case "tns:telefone":
+                    organizador.setTelefone(elementoDados.getTextContent());
+                    break;    
+
                 default:
                     break;
             }
         }
+
+        novoEvento.setOrganizador(organizador);
 
         
 
@@ -64,7 +80,7 @@ public class DOMParserEventManagement {
         System.out.println("daata inicio : " + novoEvento.getDataInicio());
         System.out.println("Nome evento : " + novoEvento.getNome());
         System.out.println("Preço evento : " + novoEvento.getPrecoBilhete() + "€");
-        
+        System.out.println("Organizador : " + novoEvento.getOrganizador().toString());
     }
 
 }

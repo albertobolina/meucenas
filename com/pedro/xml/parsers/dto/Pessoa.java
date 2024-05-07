@@ -2,9 +2,14 @@ package com.pedro.xml.parsers.dto;
 
 public class Pessoa {
 
+    private String id;
     private String nome;
     private String email;
     private String telefone;
+
+    public Pessoa(){
+
+    }
 
     public Pessoa(String nome, String email, String telefone) {
         this.nome = nome;
@@ -30,9 +35,17 @@ public class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "Pessoa [nome=" + nome + ", email=" + email + ", telefone=" + telefone + "]";
+        return "Pessoa [id=" + id + ", nome=" + nome + ", email=" + email + ", telefone=" + telefone + "]";
     }   
     
 }
