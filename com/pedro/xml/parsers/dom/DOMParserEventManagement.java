@@ -11,6 +11,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
+import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 import com.pedro.xml.parsers.dto.*;
@@ -49,8 +50,10 @@ public class DOMParserEventManagement {
         NodeList dadosOrganizer = organizerEvento.getChildNodes(); // o elemento organizador tem sub elementos, que são os seus dados
         Pessoa organizador = new Pessoa();  // instancia que vai conter os dados do organizador
 
+        /// esta é uma forma de obter os atributos
         NamedNodeMap atribOrganizador =  organizerEvento.getAttributes(); // recolhe os atributos do organizador
         organizador.setId(atribOrganizador.getNamedItem("id").getTextContent());
+
 
         for (int i = 0; i < dadosOrganizer.getLength(); i++){ // recolhe os dados do organizador
             Node elementoDados = dadosOrganizer.item(i);
@@ -71,8 +74,13 @@ public class DOMParserEventManagement {
                     break;
             }
         }
-
         novoEvento.setOrganizador(organizador);
+
+        // obtem os dados do local do evento        
+        NodeList localEventoList = documento.getElementsByTagName("tns:local");
+        Node localEvento = localEventoList.item(0);
+        localEvento.getAttributes()
+        
 
         
 
