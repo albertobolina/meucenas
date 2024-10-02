@@ -25,7 +25,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <!-- telefone -->
+    <!-- telefone, 10 digitos de 0 a 9 -->
     <xs:simpleType name="telefone">
         <xs:restriction base="xs:string">
             <xs:pattern value="[0-9]{10}"/>
