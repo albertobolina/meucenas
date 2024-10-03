@@ -4,9 +4,12 @@
     xmlns:ns="http://www.eventmanagement.com/event"
     xmlns:co="http://www.eventmanagement.com/common"
     elementFormDefault="qualified">
-    
+
+    <!-- usamos include para os schemas que se encontram no mesmo namespace -->
     <xs:include schemaLocation="pessoa.xsd"/>
     <xs:include schemaLocation="local.xsd"/>
+
+    <!-- usamos import para os schemas que se encontram noutros namespace -->
     <xs:import schemaLocation="commons.xsd" namespace="http://www.eventmanagement.com/common"/>
 
     <xs:element name="event">
